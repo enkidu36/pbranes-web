@@ -1,0 +1,28 @@
+2018-02-10 19:10:56,551 [main] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-02-10 19:10:56,634 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @57296ms 
+2018-02-10 19:10:57,722 [main] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-02-10 19:10:57,737 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @52191ms 
+2018-02-10 19:12:08,865 [main] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-02-10 19:12:08,882 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @53855ms 
+2018-02-10 19:14:42,418 [main] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-02-10 19:14:42,432 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @32857ms 
+2018-02-10 19:17:07,599 [main] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-02-10 19:17:07,615 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @39093ms 
+2018-02-10 19:27:18,411 [main] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-02-10 19:27:18,423 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @32737ms 
+2018-02-11 00:46:53,262 [main] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-02-11 00:46:53,276 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @33946ms 
+2018-02-11 18:16:06,725 [figwh-httpkit-4] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-02-11 18:16:06,940 [figwh-httpkit-4] INFO  org.eclipse.jetty.util.log - Logging initialized @19933591ms 
+2018-02-11 18:16:07,089 [figwh-httpkit-4] INFO  pbranes-web.server - hello 
+2018-02-11 18:32:51,184 [figwh-httpkit-1] INFO  pbranes-web.server - hello 
+2018-02-11 18:35:38,740 [figwh-httpkit-4] INFO  pbranes-web.server - hello 
+2018-02-11 18:36:46,424 [figwh-httpkit-3] INFO  pbranes-web.server - hello 
+2018-02-11 18:38:09,925 [figwh-httpkit-2] INFO  pbranes-web.server - hello 
+2018-02-11 18:59:23,847 [figwh-httpkit-4] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-02-11 18:59:23,861 [figwh-httpkit-4] INFO  org.eclipse.jetty.util.log - Logging initialized @887502ms 
+2018-02-11 18:59:23,914 [figwh-httpkit-4] INFO  pbranes-web.server - hello 
+2018-02-11 19:07:24,564 [figwh-httpkit-4] INFO  pbranes-web.server - hello 
+2018-02-12 00:06:28,619 [figwh-httpkit-2] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-02-12 00:06:28,796 [figwh-httpkit-2] INFO  org.eclipse.jetty.util.log - Logging initialized @211736ms 
+2018-02-12 00:06:28,889 [figwh-httpkit-2] INFO  pbranes-web.server - hello 

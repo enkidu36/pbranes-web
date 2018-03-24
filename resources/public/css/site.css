@@ -1,0 +1,33 @@
+#footer {
+  margin-top: 10px;
+}
+
+.table-center {
+    text-align: center;
+}
+
+.jumbotron {
+    position: relative;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left:: 5px !important;
+    margin-top: 10px !important;
+    text-align:left;
+}
+
+.page {
+    height: 350px;
+    margin-left: 10px;
+}
+.jumbotron, .footer {
+    background: lime !important;
+    color: blue;
+}
+
+#recovery {
+    color: blue;
+}
+
+#header-img {
+  padding-top: 20px;
+}
