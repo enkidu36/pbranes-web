@@ -19,7 +19,7 @@
                  ["4 - Lactate Threshold" 0.90 1.05]
                  ["5a - VO2 Max" 1.05 1.20]
                  ["5b - Anaerobic Capacity" 1.20 1.50]
-                 ["5c - Neuro muscular" 1.50 0.00]]})
+                 ["5c - Neuro muscularrrrrr" 1.50 0.00]]})
 
 (def joe
   {:method-name "Joe's"
