@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[clj-time "0.14.0"]
-                 [conman "0.6.8"]
+                 [commons-fileupload/commons-fileupload "1.3.3"]
                  [org.clojure/clojure "1.9.0"]
                  [ring-server "0.5.0"]
                  [reagent "0.7.0"]
@@ -13,7 +13,7 @@
                  [ring "1.6.3"]
                  [ring/ring-defaults "0.3.1"]
                  [mount "0.1.11"]
-                 [compojure "1.6.0"]
+                 [compojure "1.6.1"]
                  [hiccup "1.0.5"]
                  [yogthos/config "1.1"]
                  [org.clojure/clojurescript "1.9.946" :scope "provided"]
@@ -21,10 +21,6 @@
                  [secretary "1.2.3"]
                  [cheshire "5.8.0"]
                  [venantius/accountant "0.2.3" :exclusions [org.clojure/tools.reader]]
-                 [com.layerware/hugsql "0.4.8"]
-                 [org.postgresql/postgresql "42.1.3"]
-                 [org.clojure/java.jdbc "0.7.5"]
-                 [migratus "1.0.5"]
                  [ch.qos.logback/logback-classic "1.1.3"]
                  [org.clojure/tools.logging "0.4.0"]]
 
@@ -32,10 +28,8 @@
             [lein-cljsbuild "1.1.7"]
             [lein-asset-minifier "0.2.7"
              :exclusions [org.clojure/clojure]]
-            [migratus-lein "0.5.7"]]
-  :migratus {:store :database
-             :migration-dir "migrations"
-             :db ~(get (System/getenv) "DATABASE_URL")}
+            [migratus-lein "0.5.7"]
+            [lein-beanstalk "0.2.7"]]
   :ring {:handler pbranes-web.handler/app
          :uberwar-name "pbranes-web.war"}
 

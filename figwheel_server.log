@@ -13234,3 +13234,25 @@ notifying browser that file changed:  target\cljsbuild\public\js\out\pbranes_web
 [0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
 [32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 2.25 seconds.[0m
 notifying browser that file changed:  target\cljsbuild\public\js\out\pbranes_web\zones.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 2.302 seconds.[0m
+notifying browser that file changed:  target\cljsbuild\public\js\out\pbranes_web\zones.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.669 seconds.[0m
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.358 seconds.[0m
+notifying browser that file changed:  target\cljsbuild\public\js\out\pbranes_web\page\zone_page.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.467 seconds.[0m
+notifying browser that file changed:  target\cljsbuild\public\js\out\pbranes_web\page\zone_page.js
+Notifying browser that CSS file changed: resources/public/css/site.min.css
+Notifying browser that CSS file changed: resources/public/css/site.min.css
+Notifying browser that CSS file changed: resources/public/css/site.min.css
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.186 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target\cljsbuild\public\js\out\pbranes_web\zones.js
+[0mCompiling "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...[0m
+[32mSuccessfully compiled "target/cljsbuild/public/js/app.js" in 1.938 seconds.[0m
+notifying browser that file changed:  target\cljsbuild\public\js\out\pbranes_web\zones.js

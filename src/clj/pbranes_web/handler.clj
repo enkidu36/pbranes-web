@@ -1,12 +1,11 @@
 (ns pbranes-web.handler
-  (:require [compojure.core :refer [GET defroutes]]
-            [compojure.route :refer [not-found resources]]
+  (:require [compojure.core :refer :all]
+            [compojure.route :refer :all]
             [hiccup.page :refer [include-js include-css html5]]
             [hiccup.core :refer [h]]
             [pbranes-web.middleware :refer [wrap-middleware]]
             [config.core :refer [env]]
-            [cheshire.core :refer :all]
-            [clojure.java.jdbc :as sql]))
+            [cheshire.core :refer :all]))
 
 ;; Too many environment variables to get all
 (def env-select-keys [:dev :database-url :ftp])
@@ -45,11 +44,11 @@
             (head)
             [:body (map #(str "<b>"  (name %) ":</b>&nbsp;&nbsp;&nbsp;" (% env) "<br/>") env-select-keys)])})
 
-(defroutes routes
+(defroutes myroutes
   (GET "/" [] (loading-page))
   (GET "/about" [] (loading-page))
   (GET "/config" [] (config-report))
   (resources "/")
   (not-found "Not Found"))
 
-(def app (wrap-middleware #'routes))
+(def app (wrap-middleware #'myroutes))
