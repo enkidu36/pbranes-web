@@ -2,20 +2,18 @@
     (:require [reagent.core :as reagent :refer [atom]]
               [secretary.core :as secretary :include-macros true]
               [accountant.core :as accountant]
-              [pbranes-web.page.home-page :as h]
               [pbranes-web.page.dash-page :as d]
               [pbranes-web.page.zone-page :as z]
               [pbranes-web.page.about-page :as a]))
 
 ;;-----------------
 ;; View
-(defonce page (atom #'h/home-page))
+(defonce page (atom #'z/zone-page))
 
 (defn menu []
   [:ul.list-inline
    [:li.active [:a {:href "/"} "Home"]]
    [:li [:a {:href "/dash"} "Dashboard"]]
-   [:li [:a {:href "/zone"} "Zones"]]
    [:li [:a {:href "/about"} "About"]]])
 
 (defn header []
@@ -37,13 +35,10 @@
 ;; -------------------------
 ;; Routes
 (secretary/defroute "/" []
-  (reset! page #'h/home-page))
+  (reset! page #'z/zone-page))
 
 (secretary/defroute "/dash" []
   (reset! page #'d/dashboard-page))
-
-(secretary/defroute "/zone" []
-  (reset! page #'z/zone-page))
 
 (secretary/defroute "/about" []
   (reset! page #'a/about-page))
