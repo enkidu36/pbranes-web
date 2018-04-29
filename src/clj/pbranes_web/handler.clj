@@ -2,7 +2,6 @@
   (:require [compojure.core :refer [GET defroutes]]
             [compojure.route :refer [not-found resources]]
             [hiccup.page :refer [include-js include-css html5]]
-            [hiccup.core :refer [h]]
             [pbranes-web.middleware :refer [wrap-middleware]]
             [config.core :refer [env]]
             [cheshire.core :refer :all]))
