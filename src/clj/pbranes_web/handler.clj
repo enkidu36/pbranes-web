@@ -3,8 +3,7 @@
             [compojure.route :refer [not-found resources]]
             [hiccup.page :refer [include-js include-css html5]]
             [pbranes-web.middleware :refer [wrap-middleware]]
-            [config.core :refer [env]]
-            [cheshire.core :refer :all]))
+            [config.core :refer [env]]))
 
 ;; Too many environment variables to get all
 (def env-select-keys [:dev :database-url :ftp])

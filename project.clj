@@ -19,7 +19,6 @@
                  [org.clojure/clojurescript "1.9.946" :scope "provided"]
                  [cljs-ajax "0.5.2"]
                  [secretary "1.2.3"]
-                 [cheshire "5.8.0"]
                  [venantius/accountant "0.2.3" :exclusions [org.clojure/tools.reader]]
                  [ch.qos.logback/logback-classic "1.1.3"]
                  [org.clojure/tools.logging "0.4.0"]]
