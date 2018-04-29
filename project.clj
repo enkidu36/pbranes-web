@@ -12,6 +12,7 @@
                  [ring/ring-defaults "0.3.1"]
                  [compojure "1.6.0"]
                  [hiccup "1.0.5"]
+                 [cheshire "5.8.0"]
                  [yogthos/config "1.1.1"]
                  [org.clojure/clojurescript "1.10.238" :scope "provided"]
                  [secretary "1.2.3"]
