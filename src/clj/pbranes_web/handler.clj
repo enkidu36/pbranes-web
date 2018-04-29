@@ -5,9 +5,6 @@
             [pbranes-web.middleware :refer [wrap-middleware]]
             [config.core :refer [env]]))
 
-;; Too many environment variables to get all
-(def env-select-keys [:dev :database-url :ftp])
-
 (def mount-target
   [:div#app
       [:h3 "ClojureScript has not been compiled!"]
@@ -30,22 +27,14 @@
 (defn loading-page []
   (html5
     (head)
-    [:body.body-container
+    [:body {:class "body-container"
      mount-target
      (include-js "/js/app.js")
      (include-js "/js/bootstrap.js")] ))
 
-(defn config-report []
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body  (html5
-            (head)
-            [:body (map #(str "<b>"  (name %) ":</b>&nbsp;&nbsp;&nbsp;" (% env) "<br/>") env-select-keys)])})
-
 (defroutes routes
            (GET "/" [] (loading-page))
            (GET "/about" [] (loading-page))
-           (GET "/config" [] (config-report))
            (resources "/")
            (not-found "Not Found"))
 
