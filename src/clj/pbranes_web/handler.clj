@@ -1,6 +1,6 @@
 (ns pbranes-web.handler
-  (:require [compojure.core :refer :all]
-            [compojure.route :refer :all]
+  (:require [compojure.core :refer [GET defroutes]]
+            [compojure.route :refer [not-found resources]]
             [hiccup.page :refer [include-js include-css html5]]
             [hiccup.core :refer [h]]
             [pbranes-web.middleware :refer [wrap-middleware]]
@@ -44,11 +44,11 @@
             (head)
             [:body (map #(str "<b>"  (name %) ":</b>&nbsp;&nbsp;&nbsp;" (% env) "<br/>") env-select-keys)])})
 
-(defroutes myroutes
-  (GET "/" [] (loading-page))
-  (GET "/about" [] (loading-page))
-  (GET "/config" [] (config-report))
-  (resources "/")
-  (not-found "Not Found"))
+(defroutes routes
+           (GET "/" [] (loading-page))
+           (GET "/about" [] (loading-page))
+           (GET "/config" [] (config-report))
+           (resources "/")
+           (not-found "Not Found"))
 
-(def app (wrap-middleware #'myroutes))
+(def app (wrap-middleware #'routes))
