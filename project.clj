@@ -1,5 +1,5 @@
 (defproject pbranes-web "0.1.0-SNAPSHOT"
-  :description "Joe's Training Site"
+  :description "Joe's Training Site with calculator"
   :url "http://localhost:3449/"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
