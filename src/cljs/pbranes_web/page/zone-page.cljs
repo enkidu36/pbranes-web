@@ -1,8 +1,7 @@
 (ns pbranes-web.page.zone-page
   (:require [reagent.core :as reagent :refer [atom]]
             [pbranes-web.zones :as zones]
-            [clojure.string :as s]
-            [ajax.core :refer [GET POST]]))
+            [clojure.string :as s]))
 
 (defonce ftp-state (reagent/atom {:ftp 0 :method zones/coggin}) )
 

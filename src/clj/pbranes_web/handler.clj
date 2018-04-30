@@ -2,19 +2,13 @@
   (:require [compojure.core :refer [GET defroutes]]
             [compojure.route :refer [not-found resources]]
             [hiccup.page :refer [include-js include-css html5]]
-            [hiccup.core :refer [h]]
             [pbranes-web.middleware :refer [wrap-middleware]]
-            [config.core :refer [env]]
-            [cheshire.core :refer :all]
-            [clojure.java.jdbc :as sql]))
-
-;; Too many environment variables to get all
-(def env-select-keys [:dev :database-url :ftp])
+            [config.core :refer [env]]))
 
 (def mount-target
   [:div#app
       [:h3 "ClojureScript has not been compiled!"]
-      [:p "please run"
+      [:p "please run "
        [:b "lein figwheel"]
        " in order to start the compiler"]])
 
@@ -33,23 +27,15 @@
 (defn loading-page []
   (html5
     (head)
-    [:body.body-container
+    [:body {:class "body-container"}
      mount-target
-     (include-js "/js/app.js")
-     (include-js "/js/bootstrap.js")] ))
-
-(defn config-report []
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body  (html5
-            (head)
-            [:body (map #(str "<b>"  (name %) ":</b>&nbsp;&nbsp;&nbsp;" (% env) "<br/>") env-select-keys)])})
+     (include-js "/js/app.js" "/js/bootstrap.js")] ))
 
 (defroutes routes
-  (GET "/" [] (loading-page))
-  (GET "/about" [] (loading-page))
-  (GET "/config" [] (config-report))
-  (resources "/")
-  (not-found "Not Found"))
+           (GET "/" [] (loading-page))
+           (GET "/about" [] (loading-page))
+
+           (resources "/")
+           (not-found "Not Found"))
 
 (def app (wrap-middleware #'routes))

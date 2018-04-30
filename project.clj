@@ -4,47 +4,33 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[clj-time "0.14.0"]
-                 [conman "0.6.8"]
-                 [org.clojure/clojure "1.9.0"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
                  [ring-server "0.5.0"]
-                 [reagent "0.7.0"]
-                 [reagent-utils "0.2.1"]
+                 [reagent "0.8.0"]
+                 [reagent-utils "0.3.1"]
                  [ring "1.6.3"]
                  [ring/ring-defaults "0.3.1"]
                  [mount "0.1.11"]
                  [compojure "1.6.0"]
                  [hiccup "1.0.5"]
-                 [yogthos/config "1.1"]
-                 [org.clojure/clojurescript "1.9.946" :scope "provided"]
-                 [cljs-ajax "0.5.2"]
-                 [secretary "1.2.3"]
                  [cheshire "5.8.0"]
-                 [venantius/accountant "0.2.3" :exclusions [org.clojure/tools.reader]]
-                 [com.layerware/hugsql "0.4.8"]
-                 [org.postgresql/postgresql "42.1.3"]
-                 [org.clojure/java.jdbc "0.7.5"]
-                 [migratus "1.0.5"]
+                 [yogthos/config "1.1.1"]
+                 [org.clojure/clojurescript "1.10.238" :scope "provided"]
+                 [secretary "1.2.3"]
+                 [venantius/accountant "0.2.4" :exclusions [org.clojure/tools.reader]]
                  [ch.qos.logback/logback-classic "1.1.3"]
                  [org.clojure/tools.logging "0.4.0"]]
 
   :plugins [[lein-environ "1.1.0"]
             [lein-cljsbuild "1.1.7"]
             [lein-asset-minifier "0.2.7"
-             :exclusions [org.clojure/clojure]]
-            [migratus-lein "0.5.7"]]
-  :migratus {:store :database
-             :migration-dir "migrations"
-             :db ~(get (System/getenv) "DATABASE_URL")}
+             :exclusions [org.clojure/clojure]]]
   :ring {:handler pbranes-web.handler/app
          :uberwar-name "pbranes-web.war"}
 
   :min-lein-version "2.5.0"
-
   :uberjar-name "pbranes-web.jar"
-
   :main pbranes-web.server
-
   :clean-targets ^{:protect false}
   [:target-path
    [:cljsbuild :builds :app :compiler :output-dir]
