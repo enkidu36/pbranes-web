@@ -1,5 +1,5 @@
 (defproject pbranes-web "0.1.0-SNAPSHOT"
-  :description "Joe's Training Site with calculator"
+  :description "Joe's Training Site with calcu"
   :url "http://localhost:3449/"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
@@ -12,9 +12,8 @@
                  [ring/ring-defaults "0.3.1"]
                  [compojure "1.6.0"]
                  [hiccup "1.0.5"]
-                 [cheshire "5.8.0"]
-                 [yogthos/config "1.1.1"]
-                 [org.clojure/clojurescript "1.10.238" :scope "provided"]
+                 [yogthos/config "1.1"]
+                 [org.clojure/clojurescript "1.9.946" :scope "provided"]
                  [secretary "1.2.3"]
                  [venantius/accountant "0.2.4" :exclusions [org.clojure/tools.reader]]
                  [ch.qos.logback/logback-classic "1.1.3"]
