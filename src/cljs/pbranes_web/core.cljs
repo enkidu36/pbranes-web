@@ -19,8 +19,7 @@
 (defn header []
   [:div#jumbo.jumbotron
    [:div.row
-    [:font.col-sm-6.footer {:size "24"} "PBrane's Training" ]
-    [:img#header-img.col-sm-6 {:src "/img/formula.png"} ]]
+    [:font.col-sm-6.footer {:size "24"} "PBrane's Training" ]]
      [menu]])
 
 (defn footer []
@@ -28,9 +27,10 @@
 
 (defn current-page []
   [:div.container
+   [:div.page
     [header]
-    [:div.page [@page]]
-    [footer]])
+    [:div [@page]]
+    [footer]]])
 
 ;; -------------------------
 ;; Routes
