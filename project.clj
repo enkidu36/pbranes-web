@@ -1,5 +1,5 @@
 (defproject pbranes-web "0.1.0-SNAPSHOT"
-  :description "Joe's Training Site"
+  :description "Joe's Training Site with calcu"
   :url "http://localhost:3449/"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
@@ -10,11 +10,9 @@
                  [reagent-utils "0.3.1"]
                  [ring "1.6.3"]
                  [ring/ring-defaults "0.3.1"]
-                 [mount "0.1.11"]
                  [compojure "1.6.0"]
                  [hiccup "1.0.5"]
-                 [cheshire "5.8.0"]
-                 [yogthos/config "1.1.1"]
+                 [yogthos/config "1.1"]
                  [org.clojure/clojurescript "1.10.238" :scope "provided"]
                  [secretary "1.2.3"]
                  [venantius/accountant "0.2.4" :exclusions [org.clojure/tools.reader]]
@@ -83,11 +81,11 @@
               :project/repl {:repl-options {:init-ns pbranes-web.repl
                                             :nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
 
-                             :dependencies [[binaryage/devtools "0.9.8"]
+                             :dependencies [[binaryage/devtools "0.9.9"]
                                             [ring/ring-mock "0.3.2"]
                                             [ring/ring-devel "1.6.3"]
-                                            [prone "1.1.4"]
-                                            [figwheel-sidecar "0.5.14"]
+                                            [prone "1.5.1"]
+                                            [figwheel-sidecar "0.5.15"]
                                             [org.clojure/tools.nrepl "0.2.13"]
                                             [com.cemerick/piggieback "0.2.2"]
                                             [pjstadig/humane-test-output "0.8.3"]
@@ -95,7 +93,7 @@
                                             ]
 
                              :source-paths ["env/dev/clj"]
-                             :plugins [[lein-figwheel "0.5.14"]
+                             :plugins [[lein-figwheel "0.5.15"]
                                        ]
 
                              :injections [(require 'pjstadig.humane-test-output)

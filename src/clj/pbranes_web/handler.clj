@@ -20,7 +20,7 @@
    [:meta {:charset "utf-8"}]
    [:meta {:name "viewport"
            :content "width=device-width, initial-scale=1"}]
-   (include-css (if (env :dev) "/css/site.css"))
+   (include-css (if (env :dev) "/css/site.css"  "/css/site.min.css"))
    (include-css "/css/bootstrap-theme.css")
    (include-css "/css/bootstrap.css")])
 
