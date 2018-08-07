@@ -41,24 +41,24 @@
     (+ 0.0005 pct)
     pct))
 
-(defn calc-power [zone ftp-value]
+(defn calc-power [zone value]
   (let [[name min max] zone
         lower (adj-pct min)
         upper (adj-pct max)]
     [name
-     (ceil (calc-pct ftp-value lower LOWER-BOUND-SYMBOL))
-     (floor (calc-pct ftp-value upper UPPER-BOUND-SYMBOL))
+     (ceil (calc-pct value lower LOWER-BOUND-SYMBOL))
+     (floor (calc-pct value upper UPPER-BOUND-SYMBOL))
      (range-text lower upper)]))
 
-(defn calc-heartrate [zone heartrate-value]
+(defn calc-heartrate [zone value]
   (let [[name _ _ min max] zone
         lower (adj-pct min)
         upper (adj-pct max)]
     (if (nil? min)
       [name "" "" "Maximal"]
       [name
-       (ceil (calc-pct heartrate-value lower LOWER-BOUND-SYMBOL))
-       (floor (calc-pct heartrate-value upper UPPER-BOUND-SYMBOL))
+       (ceil (calc-pct value lower LOWER-BOUND-SYMBOL))
+       (floor (calc-pct value upper UPPER-BOUND-SYMBOL))
        (range-text lower upper)])))
 
 (defn calculate [method value type]

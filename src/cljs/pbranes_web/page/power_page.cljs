@@ -6,9 +6,10 @@
 
 (defonce ftp-state (reagent/atom {:ftp 0 :method z/coggin}) )
 
+
 (defn get-ftp-value [e]
   (let [ x (-> e .-target .-value)]
-    (if (nil? x) 0  x)))
+    (if (nil? x) 0  (* x .95))))
 
 (defn get-method-value [e]
   (let [x (-> e .-target .-value)]
@@ -70,6 +71,11 @@
            [:td upper]
            [:td lower]
            [:td range]])]]]])
+
+;(defn ftp-valid?
+;  "Value must be positive number."
+;  [value]
+;  (if ()))
 
 (defn render-power-page []
    [:div

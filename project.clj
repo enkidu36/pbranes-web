@@ -17,7 +17,8 @@
                  [secretary "1.2.3"]
                  [venantius/accountant "0.2.4" :exclusions [org.clojure/tools.reader]]
                  [ch.qos.logback/logback-classic "1.1.3"]
-                 [org.clojure/tools.logging "0.4.0"]]
+                 [org.clojure/tools.logging "0.4.0"]
+                 [ring-cors "0.1.12"]]
 
   :plugins [[lein-environ "1.1.0"]
             [lein-cljsbuild "1.1.7"]
