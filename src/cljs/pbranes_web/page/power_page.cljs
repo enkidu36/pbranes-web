@@ -9,7 +9,7 @@
 
 (defn get-ftp-value [e]
   (let [ x (-> e .-target .-value)]
-    (if (nil? x) 0  (* x .90))))
+    (if (nil? x) 0  (* x .95 ))))
 
 (defn get-method-value [e]
   (let [x (-> e .-target .-value)]
