@@ -1,9 +1,10 @@
-(ns pbranes-web.page.zone-page
+(ns pbranes-web.page.heartrate-page
   (:require [reagent.core :as reagent :refer [atom]]
-            [pbranes-web.zones :as zones]
+            [pbranes-web.zones :as z]
+            [pbranes-web.calculator.power :as p]
             [clojure.string :as s]))
 
-(defonce ftp-state (reagent/atom {:ftp 0 :method zones/coggin}) )
+(defonce ftp-state (reagent/atom {:ftp 0 :method z/coggin}) )
 
 (defn get-ftp-value [e]
   (let [ x (-> e .-target .-value)]
@@ -12,9 +13,9 @@
 (defn get-method-value [e]
   (let [x (-> e .-target .-value)]
     (cond
-      (= x ":friel") zones/friel
-      (= x ":joe") zones/joe
-      :default zones/coggin)))
+      (= x ":friel") z/friel
+      (= x ":joe") z/joe
+      :default z/coggin)))
 
 (defn swap-value!
   [param value]
@@ -23,9 +24,9 @@
 (defn ftp-component []
   [:div#ftp-value.col-sm-3
    [:div.form-group
-    [:label.control-label {:for "test-value"} "FTP value: "]
+    [:label.control-label {:for "test-value"} "LTHR value: "]
     [:input#test-value.form-control.input-sm-1 {:type "text"
-                                              :placeholder "Enter FTP test value"
+                                              :placeholder "30 Min Avg HR"
                                               :on-blur #(swap-value! :ftp (get-ftp-value %))
                                               :on-keyPress #(when (=  (.-charCode  %) 13)
                                                                 (swap-value! :ftp (get-ftp-value %)))}]]
@@ -42,10 +43,10 @@
 
 (defn ftp-text []
   (let [val (:ftp @ftp-state)
-        prefix "Current FTP"]
+        prefix "Entered LTHR"]
     (if (or (s/blank? val) (zero? (int val)))
       prefix
-      (str prefix " ( " val " watts   )" ))))
+      (str prefix " ( " val " bpm   )" ))))
 
 (defn table [input]
   [:div.row
@@ -59,7 +60,7 @@
         [:th.table-center "Zone-Purpose"]
         [:th.table-center "Lower"]
         [:th.table-center "Upper"]
-        [:th.table-center  "Percentage of FTP"]]]
+        [:th.table-center  "Percentage of LTHR"]]]
       [:tbody
         (for [row input
               :let [[name upper lower range] row]]
@@ -70,10 +71,10 @@
            [:td lower]
            [:td range]])]]]])
 
-(defn zone-page []
+(defn render-heartrate-page []
    [:div
      [ftp-component]
-     [table (zones/calc-power (:zones (:method @ftp-state)) (:ftp @ftp-state))]])
+     [table (p/calculate (:zones (:method @ftp-state)) (:ftp @ftp-state) "heartrate")]])
 
 
 

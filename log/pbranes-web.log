@@ -17770,3 +17770,5 @@ java.io.IOException: An existing connection was forcibly closed by the remote ho
 2018-04-29 17:21:17,266 [qtp1402941420-14] DEBUG org.eclipse.jetty.http.HttpParser - atEOF HttpParser{s=CLOSED,0 of -1} 
 2018-04-29 17:21:17,266 [qtp1402941420-14] DEBUG org.eclipse.jetty.http.HttpParser - parseNext s=CLOSED HeapByteBuffer@76c23328[p=0,l=0,c=8192,r=0]={<<<>>>GET / HTTP/1.1\r\nH...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} 
 2018-04-29 17:21:17,266 [qtp1402941420-14] DEBUG o.e.jetty.io.AbstractConnection - FILLING-->IDLE HttpConnection@a11aa88[IDLE,SelectChannelEndPoint@1c370c9{/0:0:0:0:0:0:0:1:54235<->3000,CLOSED,ISHUT,OSHUT,-,-,120004/200000,HttpConnection}{io=0,kio=-1,kro=-1}][p=HttpParser{s=CLOSED,0 of -1},g=HttpGenerator{s=START},c=HttpChannelOverHttp@77544e2c{r=8,c=false,a=IDLE,uri=}] 
+2018-05-02 19:39:57,056 [main] DEBUG org.eclipse.jetty.util.log - Logging to Logger[org.eclipse.jetty.util.log] via org.eclipse.jetty.util.log.Slf4jLog 
+2018-05-02 19:39:57,172 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @25964ms 

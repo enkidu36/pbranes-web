@@ -3,16 +3,18 @@
               [secretary.core :as secretary :include-macros true]
               [accountant.core :as accountant]
               [pbranes-web.page.dash-page :as d]
-              [pbranes-web.page.zone-page :as z]
+              [pbranes-web.page.power-page :as p]
+              [pbranes-web.page.heartrate-page :as h]
               [pbranes-web.page.about-page :as a]))
 
 ;;-----------------
 ;; View
-(defonce page (atom #'z/zone-page))
+(defonce page (atom #'p/render-power-page))
 
 (defn menu []
   [:ul.list-inline
-   [:li.active [:a {:href "/"} "Home"]]
+   [:li.active [:a {:href "/"} "Power"]]
+   [:li [:a {:href "/heartrate"} "Heart Rate"]]
    [:li [:a {:href "/dash"} "Dashboard"]]
    [:li [:a {:href "/about"} "About"]]])
 
@@ -35,7 +37,10 @@
 ;; -------------------------
 ;; Routes
 (secretary/defroute "/" []
-  (reset! page #'z/zone-page))
+  (reset! page #'p/render-power-page))
+
+(secretary/defroute "/heartrate" []
+  (reset! page #'h/render-heartrate-page))
 
 (secretary/defroute "/dash" []
   (reset! page #'d/dashboard-page))
